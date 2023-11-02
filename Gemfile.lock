@@ -187,11 +187,11 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8-aarch64-linux)
+    nokogiri (1.15.4-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.13.8-arm64-darwin)
+    nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
+    nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     oj (3.13.18)
     orm_adapter (0.5.0)
@@ -209,7 +209,7 @@ GEM
     protocol-http2 (0.14.2)
       protocol-hpack (~> 1.4)
       protocol-http (~> 0.18)
-    racc (1.6.0)
+    racc (1.7.2)
     rack (2.2.4)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
