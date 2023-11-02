@@ -1,0 +1,6 @@
+:max_retries: 2
+:poll_interval: 2
+:logfile: log/sidekiq.log
+:concurrency: <%= ENV.fetch("SIDEKIQ_THREADS") { 10 } %>
+:queues:
+  - default

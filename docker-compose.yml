@@ -1,0 +1,75 @@
+version: '3.9'
+
+# To access data postgres, redis and rabbitmq writes within container from host machine
+volumes:
+  postgres_data: {}
+  pgadmin_data: {}
+  redis_data: {}
+  gem_cache: {}
+
+services:
+  postgres:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+      POSTGRES_DB: ${DB_NAME:-long_mail_service_development}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@jenfi.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+      PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT:-1234}
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin/data
+      - ./servers.json:/pgadmin4/servers.json
+    ports:
+      - "1234:1234"
+
+  redis:
+    image: redis:alpine
+    restart: always
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+
+  app:
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        RAILS_ENV: ${RAILS_ENV:-development}
+    image: exam-long-mail-service
+    depends_on:
+      - postgres
+      - redis
+    env_file: .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/var/www/exam-long-mail-service
+      - gem_cache:/usr/local/bundle
+
+  worker:
+    image: exam-long-mail-service
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      RAILS_ENV: ${RAILS_ENV:-development}
+    env_file: .env
+    volumes:
+      - .:/var/www/the_tie_core_api
+      - gem_cache:/usr/local/bundle
+    command: bundle exec sidekiq -C config/sidekiq.yml

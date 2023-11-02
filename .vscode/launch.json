@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "rdbg",
+      "name": "Rails Server",
+      "request": "launch",
+      "command": "bundle exec falcon",
+      "script": "serve",
+      "args": [
+        "-b",
+        "http://0.0.0.0:3000",
+        "--cache",
+        "--threaded",
+        "--preload",
+        "config/preload.rb"
+      ],
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "type": "rdbg",
+      "name": "Attach with rdbg",
+      "request": "attach"
+    }
+  ]
+}

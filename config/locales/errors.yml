@@ -1,0 +1,10 @@
+api:
+  resources:
+    user: user
+  fields:
+    user:
+      email: Email
+  errors:
+    codes:
+      blank: cannot be blank
+      inclusion: must be set

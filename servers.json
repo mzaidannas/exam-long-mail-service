@@ -1,0 +1,15 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "long_mail_service_development",
+      "Group": "Docker",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "postgres",
+      "SSLMode": "prefer",
+      "Username": "postgres",
+      "Comment": "Database for long_mail_service",
+      "DBRestriction": "long_mail_service_development"
+    }
+  }
+}

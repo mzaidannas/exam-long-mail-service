@@ -1,0 +1,23 @@
+en:
+  error_messages:
+    # Train
+    train_booked:
+      code: 1001
+      message: "Train is booked"
+      detail: "You can't withdraw a train that has already been booked"
+    train_withdrawn:
+      code: 1002
+      message: "Train is withdrawn"
+      detail: "You can't withdraw a train that has already been withdrawn"
+    line_unavailable:
+      code: 1003
+      message: "Line Unavailable"
+      detail: "No lines are available for this train"
+    parcel_not_shipped:
+      code: 1004
+      message: "Parcel is not delivered"
+      detail: "You can't retrieve a parcel that has not been delivered yet"
+    parcels_not_available:
+      code: 1005
+      message: "Parcels are not available"
+      detail: "No parcels are available at this point"

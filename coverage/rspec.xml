@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="40" skipped="0" failures="0" errors="0" time="1.650009" timestamp="2022-07-28T01:38:26+05:00" hostname="zaid-annas">
+<properties>
+<property name="seed" value="33791"/>
+</properties>
+<testcase classname="spec.jobs.train_reached_job_spec" name="TrainReachedJob Train Reached Should update the train status" file="./spec/jobs/train_reached_job_spec.rb" time="0.228788"></testcase>
+<testcase classname="spec.jobs.train_reached_job_spec" name="TrainReachedJob Train Reached Should free the line" file="./spec/jobs/train_reached_job_spec.rb" time="0.127077"></testcase>
+<testcase classname="spec.jobs.train_reached_job_spec" name="TrainReachedJob Train Reached Should update the parcel statuses" file="./spec/jobs/train_reached_job_spec.rb" time="0.163591"></testcase>
+<testcase classname="spec.jobs.book_train_job_spec" name="BookTrainJob Test Booking creates a booking and schedule a job for train reaching time" file="./spec/jobs/book_train_job_spec.rb" time="0.120824"></testcase>
+<testcase classname="spec.jobs.book_train_job_spec" name="BookTrainJob Test Booking Should book a train" file="./spec/jobs/book_train_job_spec.rb" time="0.014837"></testcase>
+<testcase classname="spec.jobs.book_train_job_spec" name="BookTrainJob Test Booking occurs daily occurs at expected time" file="./spec/jobs/book_train_job_spec.rb" time="0.017189"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController owner #show" file="./spec/requests/trains_controller_spec.rb" time="0.098803"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController owner #index" file="./spec/requests/trains_controller_spec.rb" time="0.085229"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController owner #create" file="./spec/requests/trains_controller_spec.rb" time="0.014345"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController owner #withdraw" file="./spec/requests/trains_controller_spec.rb" time="0.015396"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController postmaster #show" file="./spec/requests/trains_controller_spec.rb" time="0.015681"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController postmaster #withdraw" file="./spec/requests/trains_controller_spec.rb" time="0.014421"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController postmaster #index" file="./spec/requests/trains_controller_spec.rb" time="0.032221"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController postmaster #create" file="./spec/requests/trains_controller_spec.rb" time="0.012349"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is operator of the train #index" file="./spec/requests/trains_controller_spec.rb" time="0.018604"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is operator of the train #withdraw" file="./spec/requests/trains_controller_spec.rb" time="0.018365"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is operator of the train #show" file="./spec/requests/trains_controller_spec.rb" time="0.015140"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is operator of the train #create" file="./spec/requests/trains_controller_spec.rb" time="0.017462"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is operator of the train when train is already withdrawn #withdraw" file="./spec/requests/trains_controller_spec.rb" time="0.014507"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is operator of the train when train has already booked #booked" file="./spec/requests/trains_controller_spec.rb" time="0.012130"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is not the operator of train #withdraw" file="./spec/requests/trains_controller_spec.rb" time="0.018332"></testcase>
+<testcase classname="spec.requests.trains_controller_spec" name="Api::V1::TrainsController operator when user is not the operator of train #show" file="./spec/requests/trains_controller_spec.rb" time="0.016506"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is not the owner of parcel #retrieve" file="./spec/requests/parcels_controller_spec.rb" time="0.024085"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is not the owner of parcel #show" file="./spec/requests/parcels_controller_spec.rb" time="0.022539"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is owner of the parcel #create" file="./spec/requests/parcels_controller_spec.rb" time="0.018157"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is owner of the parcel #show" file="./spec/requests/parcels_controller_spec.rb" time="0.018921"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is owner of the parcel #index" file="./spec/requests/parcels_controller_spec.rb" time="0.035502"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is owner of the parcel when parcel is not delivered #retrieve" file="./spec/requests/parcels_controller_spec.rb" time="0.020495"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController owner when user is owner of the parcel when parcel is delivered #retrieve" file="./spec/requests/parcels_controller_spec.rb" time="0.022328"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController operator #show" file="./spec/requests/parcels_controller_spec.rb" time="0.018527"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController operator #retrieve" file="./spec/requests/parcels_controller_spec.rb" time="0.022447"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController operator #index" file="./spec/requests/parcels_controller_spec.rb" time="0.042057"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController operator #create" file="./spec/requests/parcels_controller_spec.rb" time="0.010022"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController postmaster #create" file="./spec/requests/parcels_controller_spec.rb" time="0.008447"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController postmaster #index" file="./spec/requests/parcels_controller_spec.rb" time="0.046268"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController postmaster #show" file="./spec/requests/parcels_controller_spec.rb" time="0.018227"></testcase>
+<testcase classname="spec.requests.parcels_controller_spec" name="Api::V1::ParcelsController postmaster #retrieve" file="./spec/requests/parcels_controller_spec.rb" time="0.014580"></testcase>
+<testcase classname="spec.requests.bookings_controller_spec" name="Api::V1::BookingsController Booking when user is postmaster #index" file="./spec/requests/bookings_controller_spec.rb" time="0.083477"></testcase>
+<testcase classname="spec.requests.bookings_controller_spec" name="Api::V1::BookingsController Booking when user is postmaster #create" file="./spec/requests/bookings_controller_spec.rb" time="0.116372"></testcase>
+<testcase classname="spec.services.train_booking_service_spec" name="TrainBookingService#train to be scheduled testing headline tagging" file="./spec/services/train_booking_service_spec.rb" time="0.001643"></testcase>
+</testsuite>
